@@ -1,12 +1,8 @@
-import React from 'react';
-import Dashboard from './dashboard';
-import './App.css';
+import ClientDashboard from './pages/clientdashboard';
 
 function App() {
   return (
-    <div className="App">
-      <Dashboard />
-    </div>
+    <ClientDashboard />
   );
 }
 
