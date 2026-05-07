@@ -1,0 +1,313 @@
+.case-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.case-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #1976d2;
+  transform: translateY(-2px);
+}
+
+.case-card-overlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+  animation: shimmer 1.5s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Card Header */
+.case-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.case-header-left {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.case-type-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  padding: 8px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.case-header-info {
+  flex: 1;
+}
+
+.case-id {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.case-court {
+  font-size: 0.75rem;
+  color: #999;
+  margin: 4px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Case Title */
+.case-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 12px 0;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Case Description */
+.case-description {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 12px 0;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+/* Case Info Grid */
+.case-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+  padding: 16px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #999;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.info-value.priority-high {
+  color: #d32f2f;
+  font-weight: 700;
+}
+
+.info-value.priority-medium {
+  color: #f57c00;
+  font-weight: 700;
+}
+
+.info-value.priority-urgent {
+  color: #c62828;
+  font-weight: 700;
+}
+
+.info-value.priority-low {
+  color: #388e3c;
+  font-weight: 700;
+}
+
+/* Hearing Information */
+.case-hearing-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.hearing-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.hearing-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hearing-label {
+  font-size: 0.75rem;
+  color: #999;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hearing-value {
+  font-size: 0.9rem;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Case Progress */
+.case-progress {
+  margin: 12px 0;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+}
+
+.progress-label span:first-child {
+  color: #999;
+  font-weight: 600;
+}
+
+.progress-percent {
+  color: #1976d2;
+  font-weight: 700;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1976d2, #42a5f5);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Card Footer */
+.case-card-footer {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.view-details-btn {
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #1976d2, #1565c0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.view-details-btn:hover {
+  background: linear-gradient(135deg, #1565c0, #0d47a1);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+  transform: translateX(2px);
+}
+
+.view-details-btn.active {
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.btn-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.view-details-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .case-card {
+    padding: 16px;
+  }
+
+  .case-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .case-title {
+    font-size: 1rem;
+  }
+
+  .case-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-card {
+    padding: 12px;
+  }
+
+  .case-card-header {
+    flex-direction: column;
+  }
+
+  .case-header-left {
+    width: 100%;
+  }
+
+  .case-title {
+    font-size: 0.95rem;
+  }
+
+  .case-court {
+    white-space: normal;
+  }
+}
