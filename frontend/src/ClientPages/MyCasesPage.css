@@ -1,0 +1,507 @@
+/* Main Page Container */
+.mycases-page {
+  background: #ffffff;
+  color: #1a1a1a;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mycases-page.theme-dark {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.page-container {
+  display: flex;
+  min-height: calc(100vh - 70px);
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  overflow-y: auto;
+  transition: padding 0.3s ease;
+}
+
+.mycases-page.theme-dark .main-content {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+/* Page Header */
+.page-header {
+  margin-bottom: 36px;
+}
+
+.header-content {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+.mycases-page.theme-dark .header-content {
+  background: #2d2d2d;
+  border-color: #444;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+  letter-spacing: -0.5px;
+}
+
+.mycases-page.theme-dark .page-title {
+  color: #ffffff;
+}
+
+.page-subtitle {
+  font-size: 1.05rem;
+  color: #999;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Statistics Section */
+.statistics-section {
+  margin-bottom: 36px;
+}
+
+.statistics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.mycases-page.theme-dark .stat-card {
+  background: #2d2d2d;
+  border-color: #444;
+}
+
+.stat-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border-color: #1976d2;
+  transform: translateY(-2px);
+}
+
+.stat-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1976d2;
+}
+
+.mycases-page.theme-dark .stat-value {
+  color: #42a5f5;
+}
+
+/* Filter Section */
+.filter-section {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e0e0e0;
+}
+
+.mycases-page.theme-dark .filter-section {
+  background: #2d2d2d;
+  border-color: #444;
+}
+
+.search-bar {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 16px 14px 44px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: white;
+  color: #1a1a1a;
+}
+
+.mycases-page.theme-dark .search-input {
+  background: #3d3d3d;
+  color: #ffffff;
+  border-color: #555;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #999;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mycases-page.theme-dark .filter-group label {
+  color: #bbb;
+}
+
+.filter-select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: white;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mycases-page.theme-dark .filter-select {
+  background: #3d3d3d;
+  color: #ffffff;
+  border-color: #555;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.filter-select:hover {
+  border-color: #1976d2;
+}
+
+/* Cases Section */
+.cases-section {
+  margin-bottom: 36px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.mycases-page.theme-dark .section-title {
+  color: #ffffff;
+}
+
+.section-subtitle {
+  font-size: 0.95rem;
+  color: #999;
+  margin: 0;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.no-cases,
+.no-hearings,
+.no-notifications {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  color: #999;
+  border: 2px dashed #ddd;
+}
+
+.mycases-page.theme-dark .no-cases,
+.mycases-page.theme-dark .no-hearings,
+.mycases-page.theme-dark .no-notifications {
+  background: #2d2d2d;
+  border-color: #555;
+  color: #aaa;
+}
+
+.no-cases-icon {
+  font-size: 2.5rem;
+  margin: 0 0 12px 0;
+}
+
+.no-cases-text {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Hearings Section */
+.hearings-section {
+  margin-bottom: 36px;
+}
+
+.hearings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Notifications Section */
+.notifications-section {
+  margin-bottom: 36px;
+}
+
+.notifications-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 24px;
+  }
+
+  .statistics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .cases-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 16px;
+  }
+
+  .page-header {
+    margin-bottom: 24px;
+  }
+
+  .header-content {
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .statistics-section {
+    margin-bottom: 24px;
+  }
+
+  .statistics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  .stat-icon {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .filter-section {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .cases-section {
+    margin-bottom: 24px;
+  }
+
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .hearings-section {
+    margin-bottom: 24px;
+  }
+
+  .notifications-section {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 12px;
+  }
+
+  .page-header {
+    margin-bottom: 16px;
+  }
+
+  .header-content {
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 1.3rem;
+  }
+
+  .page-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .statistics-grid {
+    gap: 8px;
+  }
+
+  .stat-card {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .filter-section {
+    padding: 12px;
+  }
+
+  .search-input {
+    padding: 12px 12px 12px 40px;
+    font-size: 0.95rem;
+  }
+
+  .filter-select {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+
+  .no-cases,
+  .no-hearings,
+  .no-notifications {
+    padding: 20px;
+  }
+
+  .no-cases-icon {
+    font-size: 2rem;
+  }
+
+  .no-cases-text {
+    font-size: 0.9rem;
+  }
+}
+
+/* Scrollbar Styling */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
